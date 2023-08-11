@@ -34,11 +34,8 @@ class Knight
   end
   
   def knight_moves(start, finish)
-    # edge case: start and finish are the same
     return [start] if start == finish
 
-    # root node representing the first space in the path, "last" node is nil
-    # starting space is counted as visited, so it can't be used again
     first_node = Square.new(start)
     queue = [first_node]
 
