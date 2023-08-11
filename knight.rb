@@ -8,12 +8,10 @@ class Board
 
     i = 0
     puts "    ---------------"
-
     grid.each do |row|
       puts "#{i} | #{row.join(" ")} |"
       i += 1
     end
-
     puts "    ---------------"
     puts "    0 1 2 3 4 5 6 7"
 
@@ -42,7 +40,6 @@ class Knight
 
     # root node representing the first space in the path, "last" node is nil
     # starting space is counted as visited, so it can't be used again
-
     first_node = Square.new(start)
     queue = [first_node]
 
@@ -93,14 +90,11 @@ class Knight
       end
 
       i += 1
-
       unless move[0] > 7 || move[0] < 0 || move[1] > 7 ||
       move[1] < 0 || repeat?(move)
         moveset.push(move)
       end
-
     end
-
     return moveset
   end
 
@@ -112,7 +106,6 @@ class Knight
     end
     return false
   end
-
 end
 
 chessboard = Board.new()
