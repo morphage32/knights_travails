@@ -29,7 +29,6 @@ class Square
 end
 
 class Knight
-
   def initialize()
     @visited = []
   end
